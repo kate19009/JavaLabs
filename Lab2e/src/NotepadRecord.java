@@ -22,11 +22,11 @@ public class NotepadRecord extends Notepad
     public void editNote()
     {
         System.out.println("What note do you want change?");
-        Scanner inn = new Scanner(System.in);
-        String note = inn.next();
-        System.out.println("Enter a new note");
         Scanner in = new Scanner(System.in);
         int position = in.nextInt();
+        System.out.println("Enter a new note");
+        Scanner inn = new Scanner(System.in);
+        String note = inn.next();
         if (notes.length == 0 || notes.length < position)
         {
             throw new NullPointerException("Error");
