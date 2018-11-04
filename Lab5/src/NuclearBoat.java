@@ -17,6 +17,9 @@ public class NuclearBoat
     }
     private EngineForNuclearBoat engineOfTheBoat = new EngineForNuclearBoat();
     @NuclearBoatAnnotation(title = "Annotation", started = true, text = "This is annotation for NuclearBoat class")
+    public NuclearBoat()
+     {
+     }
     /** method to launch nuclear boat to sail */
     public void launchToSail()
     {
