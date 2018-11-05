@@ -26,7 +26,7 @@ public class Main
                     {
                         for (int j=0; j<size; j++)
                         {
-                           System.out.print(matrixL[size][size] + "\t");
+                           System.out.print(matrixL[i][j] + "\t");
                         }
                     }
                     System.out.println();
