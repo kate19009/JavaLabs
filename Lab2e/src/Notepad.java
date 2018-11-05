@@ -19,7 +19,14 @@ public class Notepad
     {
         if (notes.length == 0)
         {
-            throw new NullPointerException("Error");
+            try
+            {
+                throw new NullPointerException("Error");
+            }
+            catch(NullPointerException e)
+            {
+                System.out.println("Error! There's nothing to show");
+            }
         }
         else
         {
