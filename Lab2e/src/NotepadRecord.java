@@ -51,4 +51,5 @@ public class NotepadRecord extends Notepad
             this.notes[position] = note;
         }
     }
+
 }
