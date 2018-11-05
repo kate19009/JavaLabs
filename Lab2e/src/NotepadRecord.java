@@ -7,7 +7,7 @@ public class NotepadRecord extends Notepad
         System.out.println("What note do you want delete?");
         Scanner in = new Scanner(System.in);
         int position = in.nextInt();
-        if (notes.length == 0 || notes.length < position)
+        if (last == 0 || last < position)
         {
             try
             {
@@ -34,9 +34,9 @@ public class NotepadRecord extends Notepad
         System.out.println("Enter a new note");
         Scanner inn = new Scanner(System.in);
         String note = inn.next();
-        if (notes.length == 0 || notes.length < position)
+        if (last == 0 || last < position)
         {
-             try
+            try
             {
                 throw new NullPointerException("Error");
             }
