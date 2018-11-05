@@ -9,7 +9,14 @@ public class NotepadRecord extends Notepad
         int position = in.nextInt();
         if (notes.length == 0 || notes.length < position)
         {
-            throw new NullPointerException("Error");
+            try
+            {
+                throw new NullPointerException("Error");
+            }
+            catch(NullPointerException e)
+            {
+                System.out.println("Error! Change input data");
+            }
         }
         else
         {
@@ -29,7 +36,14 @@ public class NotepadRecord extends Notepad
         String note = inn.next();
         if (notes.length == 0 || notes.length < position)
         {
-            throw new NullPointerException("Error");
+             try
+            {
+                throw new NullPointerException("Error");
+            }
+            catch(NullPointerException e)
+            {
+                System.out.println("Error! Change input data");
+            }
         }
         else
         {
