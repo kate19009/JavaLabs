@@ -28,8 +28,8 @@ public class Main
                         {
                            System.out.print(matrixL[i][j] + "\t");
                         }
+                           System.out.println();
                     }
-                    System.out.println();
 
             }
         }
