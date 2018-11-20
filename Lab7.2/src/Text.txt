@@ -1,0 +1,19 @@
+ public static void drawFrame(String path, double x, double y, double w, double h) throws IOException
+  {
+    BufferedImage image = ImageIO.read(new File(path));
+    Graphics2D g2d = image.createGraphics();
+
+    g2d.setColor(Color.GREEN);
+    g2d.setStroke(new BasicStroke(10));
+    g2d.draw(new Ellipse2D.Double(x * image.getWidth(), y * image.getHeight(), w * image.getWidth(), h * image.getHeight()));
+    g2d.dispose();
+
+    File f = new File("resources/out_photo/result.jpg");
+    if (!f.exists()) {
+      if (!f.createNewFile()) {
+        throw new IOException("Error! Can't create file!");
+      }
+    }
+    RenderedImage render = image;
+    ImageIO.write(render, "jpg", f);
+  }

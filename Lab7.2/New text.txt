@@ -1,0 +1,9 @@
+Total words 13
+'public' use 1 time
+'static' use 1 time
+'void' use 1 time
+'double' use 4 times
+'throws' use 1 time
+'new' use 2 times
+'if' use 2 times
+'throw' use 1 time
