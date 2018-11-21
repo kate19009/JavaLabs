@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane prefHeight="436.0" prefWidth="349.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab closable="false" text="Show files">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="336.0">
+               <children>
+                  <ImageView disable="true" fitHeight="555.0" fitWidth="457.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wallpaper.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="showButton" layoutX="112.0" layoutY="173.0" mnemonicParsing="false" onAction="#showFiles" prefHeight="57.0" prefWidth="125.0" text="Show files" textFill="#1032b9">
+                     <font>
+                        <Font name="Avenir Book" size="20.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab closable="false" text="Work with text files">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="354.0">
+               <children>
+                  <ImageView fitHeight="541.0" fitWidth="368.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wallpaper.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="createButton" layoutX="118.0" layoutY="116.0" mnemonicParsing="false" onAction="#createFile" prefHeight="57.0" prefWidth="125.0" text="Create" textFill="#1032b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteButton" layoutX="118.0" layoutY="173.0" mnemonicParsing="false" onAction="#deleteFile" prefHeight="57.0" prefWidth="125.0" text="Delete" textFill="#1032b9">
+                     <font>
+                        <Font name="Avenir Book" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="writeButtn" layoutX="118.0" layoutY="230.0" mnemonicParsing="false" onAction="#writeNode" prefHeight="57.0" prefWidth="125.0" text="Add node" textFill="#1032b9">
+                     <font>
+                        <Font name="Avenir Book" size="20.0" />
+                     </font>
+                  </Button>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+   <effect>
+      <Bloom threshold="1.0" />
+   </effect>
+</TabPane>
