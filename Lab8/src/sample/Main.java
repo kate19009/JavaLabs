@@ -14,7 +14,7 @@ public class Main extends Application
         try
         {
             Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-            primaryStage.setTitle("FaceHunter");
+            primaryStage.setTitle("File editor");
             primaryStage.setScene(new Scene(root, 349, 436));
             primaryStage.setResizable(false);
             primaryStage.show();
