@@ -18,12 +18,7 @@ public class GenericClass<T>
             inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
             inputStream1 = getClass().getClassLoader().getResourceAsStream(propFileName);
 
-                if (inputStream != null) {
-                    prop.load(inputStream);
-                } else {
-                    throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-                }
-                if (inputStream1 != null) {
+                 if (inputStream != null || inputStream1 != null) {
                     prop.load(inputStream1);
                 } else {
                     throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
