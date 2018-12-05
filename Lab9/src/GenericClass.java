@@ -9,7 +9,8 @@ public class GenericClass<T>
     String result="";
     InputStream inputStream;
     InputStream inputStream1;
-    public String getPropValues(String propFileName, String key) throws IOException {
+    public String getPropValues(String propFileName, String key) throws IOException 
+    {
         try
         {
 
@@ -18,9 +19,12 @@ public class GenericClass<T>
             inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
             inputStream1 = getClass().getClassLoader().getResourceAsStream(propFileName);
 
-                 if (inputStream != null || inputStream1 != null) {
+                 if (inputStream != null || inputStream1 != null) 
+                 {
                     prop.load(inputStream1);
-                } else {
+                }
+                else 
+                {
                     throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
                 }
                 result = "Stream1. Value of " + key + " is " + prop.getProperty(key);
