@@ -7,39 +7,33 @@ import java.util.Properties;
 public class GenericClass<T>
 {
     String result="";
-    InputStream inputStream;
-    InputStream inputStream1;
-    public String getPropValues(String propFileName, String key) throws IOException 
-    {
-        try
+   // InputStream inputStream;
+   // InputStream inputStream1;
+    public String getPropValues(String propFileName, String key) throws Exception {
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName))
         {
-
-            Properties prop = new Properties();
-
-            inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
-            inputStream1 = getClass().getClassLoader().getResourceAsStream(propFileName);
-
-                 if (inputStream != null || inputStream1 != null) 
-                 {
+            try (InputStream inputStream1 = getClass().getClassLoader().getResourceAsStream(propFileName))
+            {
+                Properties prop = new Properties();
+                if (inputStream != null || inputStream1 != null) {
                     prop.load(inputStream1);
-                }
-                else 
-                {
+                } else {
                     throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
                 }
                 result = "Stream1. Value of " + key + " is " + prop.getProperty(key);
                 System.out.println(result);
                 result = "Stream2. Value of " + key + " is " + prop.getProperty(key);
                 System.out.println(result + '\n');
+            }
+            catch (FileNotFoundException e)
+            {
+                System.out.println("Exception: " + e);
+            }
+
         }
-        catch (Exception e)
+        catch (FileNotFoundException e)
         {
             System.out.println("Exception: " + e);
-        }
-        finally
-        {
-            inputStream.close();
-            inputStream1.close();
         }
         return result;
     }
